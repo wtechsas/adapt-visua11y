@@ -1,0 +1,952 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "properties": {
+    "pluginLocations": {
+      "type": "object",
+      "properties": {
+        "config": {
+          "type": "object",
+          "properties": {
+            "_visua11y": {
+              "type": "object",
+              "required": false,
+              "legend": "Accesibilidad visual",
+              "properties": {
+                 "_isEnabled": {
+                  "type": "boolean",
+                  "required": false,
+                  "title": "Habilitar la accesibilidad visual para el selector de idiomas",
+                  "inputType": "Checkbox",
+                  "validators": []
+                }
+              }
+            }
+          }
+        },
+        "course": {
+          "type": "object",
+          "properties": {
+            "_visua11y": {
+              "type": "object",
+              "required": false,
+              "legend": "Accesibilidad visual",
+              "properties": {
+                 "_isEnabled": {
+                  "type": "boolean",
+                  "required": false,
+                  "title": "Habilitar la accesibilidad visual",
+                  "help": "Si se activa, se activará la accesibilidad visual en el recurso",
+                  "inputType": "Checkbox",
+                  "validators": []
+                },
+                "_shouldSavePreferences": {
+                  "type": "boolean",
+                  "required": false,
+                  "title": "Guardar preferencias del estudiante",
+                  "help": "Guarda preferencias que el estudiante haya escogido",
+                  "inputType": "Checkbox",
+                  "validators": []
+                },
+                "title": {
+                  "type": "string",
+                  "required": false,
+                  "default": "Controles de accesibilidad visual",
+                  "title": "Título de la ventana de accesibilidad visual",
+                  "help": "Establece el título de la ventana emergente de accesibilidad visual",
+                  "inputType": "Text",
+                  "validators": []
+                },
+                "body": {
+                  "type": "string",
+                  "required": false,
+                  "default": "Utilice los controles que aparecen a continuación para personalizar su experiencia de aprendizaje según sus necesidades individuales.",
+                  "title": "Texto de la ventana de accesibilidad visual",
+                  "help": "Establece el texto de la ventana de accesibilidad visual",
+                  "inputType": "Text",
+                  "validators": []
+                },
+                "_groups": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Grupo de títulos de presentación visual",
+                  "properties": {
+                    "visualDisplay": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Mejorar la presentación visual",
+                      "title": "Presentación visual",
+                      "help": "Establece el título para el grupo de presentación visual",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "distractions": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Reducir distracciones",
+                      "title": "Distracciones",
+                      "help": "Establece el título para el grupo de distracciones",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "readability": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Facilidad de lectura",
+                      "title": "Facilidad de lectura",
+                      "help": "Establece el título para el grupo de facilidad de lectura",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_preview": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Vista previa",
+                  "properties": {
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Tútulo",
+                      "title": "Tútulo",
+                      "help": "Establece el título para la vista previa",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "character": {
+                      "type": "string",
+                      "required": false,
+                      "default": "A",
+                      "title": "Letra",
+                      "help": "Establece la letra para la vista previa",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_colorProfiles": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Opciones de color",
+                  "properties": {
+                    "default": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Por defecto",
+                      "title": "Nombre de la opción de color por defecto",
+                      "help": "Establece el nombre de la opción de color por defecto",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "achromatopsia": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Escala de grises",
+                      "title": "Nombre para Escala de grises",
+                      "help": "Establece el nombre de la opción de color escala de grises",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "protanopia": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Rojo/verde",
+                      "title": "Nombre para Protanopia",
+                      "help": "Establece el nombre de la opción de color Protanopia",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "deuteranopia": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Verde/rojo",
+                      "title": "Nombre para Deuteranopia",
+                      "help": "Establece el nombre de la opción de color Deuteranopia",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "tritanopia": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Azul/Amarillo",
+                      "title": "Nombre para Tritanopia",
+                      "help": "Establece el nombre de la opción de color Tritanopia",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "dyslexia": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Amarillo",
+                      "title": "Nombre para Dyslexia",
+                      "help": "Establece el nombre de la opción de color Dyslexia",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_colorProfile": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Opción de color",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta las configuraciones para seleccionar las opciones de colores",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Opciones de color",
+                      "title": "Título",
+                      "help": "Muestra el título para hacer referencia a las ciones de color",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Por defecto",
+                      "title": "Opción de color por defecto",
+                      "help": "Establece la opción de color que estara seleccionada por defecto",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_highContrast": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Contraste alto",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta la configuración para el contraste alto",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Contraste alto",
+                      "title": "Título",
+                      "help": "Título que mostrará en la selección de la opción",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Habilitar al entrar al recurso",
+                      "help": "Si se activa, esta opción estara habilitada por defecto",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    }
+                  }
+                },
+                "_highContrastLuminanceThreshold": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Umbral de iluminación en alto contraste",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Habilitar",
+                      "help": "Habilita la iluminación en alto contraste en el recurso",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Iluminación en alto contraste",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "number",
+                      "required": false,
+                      "default": 70,
+                      "title": "Valor por defecto",
+                      "help": "Establece el valor por defecto que tendrá esta propiedad",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_noTransparency": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Sin transparencia",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Sin transparencia",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Habilitar al entrar al recurso",
+                      "help": "Si se activa, esta opción estara habilitada por defecto",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    }
+                  }
+                },
+                "_lowBrightness": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Luminosidad baja",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Luminosidad baja",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Habilitar al entrar al recurso",
+                      "help": "Si se activa, esta opción estara habilitada por defecto",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    }
+                  }
+                },
+                "_invert": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Invertido",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Invertido",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Habilitar al entrar al recurso",
+                      "help": "Si se activa, esta opción estara habilitada por defecto",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    }
+                  }
+                },
+                "_noAnimations": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Sin animaciones",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Sin animaciones",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Habilitar al entrar al recurso",
+                      "help": "Si se activa, esta opción estara habilitada por defecto",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    }
+                  }
+                },
+                "_noBackgroundImages": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Sin imágenes de fondo",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Sin imágenes de fondo",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": false,
+                      "title": "Habilitar al entrar al recurso",
+                      "help": "Si se activa, esta opción estara habilitada por defecto",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    }
+                  }
+                },
+                "_fontSize": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Tamaño de letra",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Font size",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "smallLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Pequeña",
+                      "title": "Texto letra pequeña",
+                      "help": "Texto que se mostrará en la opción para el tamaño de letra pequeña",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_small": {
+                      "type": "string",
+                      "required": false,
+                      "default": "9pt",
+                      "title": "Tamaño de letra pequeña",
+                      "help": "Tamaño que tendrá la letra pequeña",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "mediumLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Mediana",
+                      "title": "Texto letra mediana",
+                      "help": "Texto que se mostrará en la opción para el tamaño de letra mediana",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_medium": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Tamaño de letra mediana",
+                      "help": "Tamaño que tendrá la letra mediana",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "largeLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Grande",
+                      "title": "Texto letra grande",
+                      "help": "Texto que se mostrará en la opción para el tamaño de letra grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_large": {
+                      "type": "string",
+                      "required": false,
+                      "default": "18pt",
+                      "title": "Tamaño de letra grande",
+                      "help": "Tamaño que tendrá la letra grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "string",
+                      "required": false,
+                      "default": "",
+                      "title": "Tamaño por defecto",
+                      "help": "Tamaño que tendrá la letra por defecto",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_lineHeight": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Alto de línea",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Alto de línea",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "smallLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Pequeño",
+                      "title": "Texto - Alto de línea pequeño",
+                      "help": "Texto que se mostrará en la opción para el alto de línea pequeño",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_small": {
+                      "type": "number",
+                      "required": false,
+                      "default": 0.9,
+                      "title": "Tamaño - Alto de línea pequeño",
+                      "help": "Tamaño que tendrá el alto de línea pequeño",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "mediumLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Mediano",
+                      "title": "Texto - Alto de línea mediano",
+                      "help": "Texto que se mostrará en la opción para el alto de línea mediano",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_medium": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1,
+                      "title": "Tamaño - Alto de línea mediano",
+                      "help": "Tamaño que tendrá el alto de línea mediano",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "largeLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Grande",
+                      "title": "Texto - Alto de línea grande",
+                      "help": "Texto que se mostrará en la opción para el alto de línea grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_large": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1.2,
+                      "title": "Tamaño - Alto de línea grande",
+                      "help": "Tamaño que tendrá el alto de línea grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1,
+                      "title": "Alto de línea por defecto",
+                      "help": "Tamaño que tendrá el alto de línea por defecto",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_paragraphSpacing": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Espaciado entre párrafos",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Espaciado entre párrafos",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "smallLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Pequeño",
+                      "title": "Texto - Espaciado entre párrafos - pequeño",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre párrafos - pequeño",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_small": {
+                      "type": "number",
+                      "required": false,
+                      "default": 0.5,
+                      "title": "Tamaño - Espaciado entre párrafos - pequeño",
+                      "help": "Tamaño que tendrá el espaciado entre párrafos - pequeño",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "mediumLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Mediano",
+                      "title": "Texto - Espaciado entre párrafos - mediano",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre párrafos - mediano",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_medium": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1,
+                      "title": "Tamaño - Espaciado entre párrafos - mediano",
+                      "help": "Tamaño que tendrá el espaciado entre párrafos - mediano",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "largeLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Grande",
+                      "title": "Texto - Espaciado entre párrafos - Grande",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre párrafos - Grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_large": {
+                      "type": "number",
+                      "required": false,
+                      "default": 2,
+                      "title": "Tamaño - Espaciado entre párrafos - grande",
+                      "help": "Tamaño que tendrá el espaciado entre párrafos - grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1,
+                      "title": "Espaciado entre párrafos por defecto",
+                      "help": "Tamaño que tendrá el espaciado entre párrafos por defecto",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_letterSpacing": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Espaciado entre letras",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Espaciado entre letras",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "smallLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Pequeño",
+                      "title": "Texto - Espaciado entre letras - pequeño",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre letras - pequeño",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_small": {
+                      "type": "number",
+                      "required": false,
+                      "default": 0.97,
+                      "title": "Tamaño - Espaciado entre letras - pequeño",
+                      "help": "Tamaño que tendrá el espaciado entre letras - pequeño",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "mediumLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Mediano",
+                      "title": "Texto - Espaciado entre letras - mediano",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre letras - mediano",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_medium": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1,
+                      "title": "Tamaño - Espaciado entre letras - mediano",
+                      "help": "Tamaño que tendrá el espaciado entre letras - mediano",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "largeLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Grande",
+                      "title": "Texto - Espaciado entre letras - Grande",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre letras - Grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_large": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1.2,
+                      "title": "Tamaño - Espaciado entre letras - grande",
+                      "help": "Tamaño que tendrá el espaciado entre letras - grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1,
+                      "title": "Espaciado entre letras por defecto",
+                      "help": "Tamaño que tendrá el espaciado entre letras por defecto",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_wordSpacing": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Espaciodo entre palabras",
+                  "properties": {
+                    "_isEnabled": {
+                      "type": "boolean",
+                      "required": false,
+                      "default": true,
+                      "title": "Mostrar/ocultar",
+                      "help": "Muestra u oculta esta opción en la opciones",
+                      "inputType": "Checkbox",
+                      "validators": []
+                    },
+                    "title": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Espaciodo entre palabras",
+                      "title": "Título",
+                      "help": "Título que se mostrará para esta opción en el recurso",
+                      "inputType": "Text",
+                      "validators": []
+                    },                    
+                    "smallLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Pequeño",
+                      "title": "Texto - Espaciado entre palabras - pequeño",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre palabras - pequeño",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_small": {
+                      "type": "number",
+                      "required": false,
+                      "default": 0.97,
+                      "title": "Tamaño - Espaciado entre palabras - pequeño",
+                      "help": "Tamaño que tendrá el espaciado entre palabras - pequeño",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "mediumLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Mediano",
+                      "title": "Texto - Espaciado entre palabras - mediano",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre palabras - mediano",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_medium": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1,
+                      "title": "Tamaño - Espaciado entre palabras - mediano",
+                      "help": "Tamaño que tendrá el espaciado entre palabras - mediano",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "largeLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Grande",
+                      "title": "Texto - Espaciado entre palabras - Grande",
+                      "help": "Texto que se mostrará en la opción para el espaciado entre palabras - Grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_large": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1.2,
+                      "title": "Tamaño - Espaciado entre palabras - grande",
+                      "help": "Tamaño que tendrá el espaciado entre palabras - grande",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "_default": {
+                      "type": "number",
+                      "required": false,
+                      "default": 1,
+                      "title": "Espaciado entre palabras por defecto",
+                      "help": "Tamaño que tendrá el espaciado entre palabras por defecto",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "_button": {
+                  "type": "object",
+                  "required": false,
+                  "title": "Botones",
+                  "properties": {
+                    "navigationAriaLabel": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Configuración de la accesibilidad visual",
+                      "title": "Texto alternativo del botón de navegación",
+                      "help": "Texto alternativo que identificará el botón de navegación",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "resetText": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Restablecer",
+                      "title": "Botón - Restablecer",
+                      "help": "Texto del botón para restablecer las opciones de accesibilidad visual",
+                      "inputType": "Text",
+                      "validators": []
+                    },
+                    "closeText": {
+                      "type": "string",
+                      "required": false,
+                      "default": "Cerrar",
+                      "title": "Botón - Cerrar",
+                      "help": "Texto del botón para cerrar las opciones de accesibilidad visual",
+                      "inputType": "Text",
+                      "validators": []
+                    }
+                  }
+                },
+                "resetAriaMessage": {
+                  "type": "string",
+                  "required": false,
+                  "default": "Se han restablecido las opciones de accesibilidad visual",
+                  "title": "Notificación de restablecimiento",
+                  "help": "Notificación que se mostrará cuando se restablecen las opciones de accesibilidad visual",
+                  "inputType": "Text",
+                  "validators": []
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

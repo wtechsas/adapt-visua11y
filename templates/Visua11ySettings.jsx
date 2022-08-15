@@ -28,6 +28,9 @@ export default function Visua11ySettings(config) {
         config._invert._isEnabled) &&
 
         <div className='visua11ysettings__group visua11ysettings__group-visualdisplay' role='group' aria-labelledby='visualdisplay'>
+          <p>Para obtener ayuda más personalizada visite: 
+          <a href="https://www.centroderelevo.gov.co"> www.centroderelevo.gov.co</a>.
+          </p>
           {/* Should 'visua11ysettings__group-title' read as a title or is the lablled list enough? */}
           {config._groups.visualDisplay &&
           <div className='visua11ysettings__group-title' id='visualdisplay' role="heading" aria-level="2">

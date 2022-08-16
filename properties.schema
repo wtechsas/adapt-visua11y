@@ -36,6 +36,7 @@
                  "_isEnabled": {
                   "type": "boolean",
                   "required": false,
+                  "default": true,
                   "title": "Habilitar la accesibilidad visual",
                   "help": "Si se activa, se activará la accesibilidad visual en el recurso",
                   "inputType": "Checkbox",

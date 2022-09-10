@@ -17,6 +17,7 @@
                  "_isEnabled": {
                   "type": "boolean",
                   "required": false,
+                  "default": true,
                   "title": "Habilitar la accesibilidad visual para el selector de idiomas",
                   "inputType": "Checkbox",
                   "validators": []

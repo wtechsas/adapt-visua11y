@@ -111,8 +111,8 @@
                     "title": {
                       "type": "string",
                       "required": false,
-                      "default": "Tútulo",
-                      "title": "Tútulo",
+                      "default": "Título",
+                      "title": "Título",
                       "help": "Establece el título para la vista previa",
                       "inputType": "Text",
                       "validators": []
@@ -816,7 +816,7 @@
                 "_wordSpacing": {
                   "type": "object",
                   "required": false,
-                  "title": "Espaciodo entre palabras",
+                  "title": "Espaciado entre palabras",
                   "properties": {
                     "_isEnabled": {
                       "type": "boolean",
@@ -830,7 +830,7 @@
                     "title": {
                       "type": "string",
                       "required": false,
-                      "default": "Espaciodo entre palabras",
+                      "default": "Espaciado entre palabras",
                       "title": "Título",
                       "help": "Título que se mostrará para esta opción en el recurso",
                       "inputType": "Text",
